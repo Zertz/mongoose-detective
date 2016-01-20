@@ -1,0 +1,36 @@
+module.exports = (model, path) => {
+  const keys = path.split('.')
+  let modelName
+  let schema = model.schema
+  let schemaPath = ''
+
+  for (let i = 0, length = keys.length; i < length; i++) {
+    if (schemaPath.length > 0) {
+      schemaPath += '.'
+    }
+
+    schemaPath += keys[i]
+
+    if (schema.path(schemaPath) && schema.path(schemaPath).schema) {
+      schema = schema.path(schemaPath).schema
+    }
+  }
+
+  if (!schema) {
+    return
+  }
+
+  schemaPath = schema.path(keys[keys.length - 1]) || schema.path(schemaPath)
+
+  if (!schemaPath && (!model || !model.discriminators)) {
+    return
+  }
+
+  if (schemaPath.caster && schemaPath.caster.options) {
+    modelName = schemaPath.caster.options.ref
+  } else if (schemaPath.options) {
+    modelName = schemaPath.options.ref
+  }
+
+  return modelName
+}
