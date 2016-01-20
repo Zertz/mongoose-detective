@@ -1,0 +1,18 @@
+{
+  "name": "mongoose-detective",
+  "version": "0.1.0",
+  "description": "Find the referenced model name at a specified path",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec ./test",
+    "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec ./test"
+  },
+  "keywords": [
+    "mongoose",
+    "model",
+    "ref",
+    "path"
+  ],
+  "author": "Pier-Luc Gendreau",
+  "license": "MIT"
+}
