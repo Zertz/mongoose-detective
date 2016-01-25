@@ -1,11 +1,14 @@
 {
   "name": "mongoose-detective",
   "version": "0.1.0",
-  "description": "Find the referenced model name at a specified path",
-  "main": "index.js",
+  "description": "Find the referenced model name at a specified path.",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha -R spec ./test",
-    "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec ./test"
+    "lint": "standard",
+    "compile": "babel src -d lib",
+    "prepublish": "npm test",
+    "pretest": "npm run lint && npm run compile",
+    "test": "mocha --compilers js:babel-core/register -R spec ./test"
   },
   "keywords": [
     "mongoose",
@@ -14,5 +17,30 @@
     "path"
   ],
   "author": "Pier-Luc Gendreau",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zertz/weedout"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "mocha": "^2.3.4",
+    "standard": "^5.4.1"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/"
+  ],
+  "standard": {
+    "ignore": [
+      "lib"
+    ],
+    "globals": [
+      "describe",
+      "it"
+    ]
+  }
 }
