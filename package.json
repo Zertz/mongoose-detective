@@ -19,7 +19,7 @@
   "author": "Pier-Luc Gendreau",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zertz/weedout"
+    "url": "https://github.com/Zertz/mongoose-detective"
   },
   "license": "MIT",
   "devDependencies": {
