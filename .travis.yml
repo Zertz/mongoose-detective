@@ -5,7 +5,5 @@ node_js:
   - "4.2"
   - "node"
 sudo: false
-before_install:
-  - npm i mongoose@^4.0.0
 script:
   - npm test
