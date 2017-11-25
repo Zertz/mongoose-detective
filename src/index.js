@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = (model, path) => {
   const keys = path.split('.')
   let schema = model.schema
