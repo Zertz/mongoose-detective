@@ -1,6 +1,5 @@
 module.exports = (model, path) => {
   const keys = path.split('.')
-  let modelName
   let schema = model.schema
   let schemaPath = ''
 
@@ -27,10 +26,8 @@ module.exports = (model, path) => {
   }
 
   if (schemaPath.caster && schemaPath.caster.options) {
-    modelName = schemaPath.caster.options.ref
+    return schemaPath.caster.options.ref
   } else if (schemaPath.options) {
-    modelName = schemaPath.options.ref
+    return schemaPath.options.ref
   }
-
-  return modelName
 }
