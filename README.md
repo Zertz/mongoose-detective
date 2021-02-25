@@ -1,4 +1,4 @@
-# mongoose-detective [![Build Status](https://travis-ci.org/Zertz/mongoose-detective.png)](https://travis-ci.org/Zertz/mongoose-detective) [![NPM version](https://badge.fury.io/js/mongoose-detective.png)](http://badge.fury.io/js/mongoose-detective) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# mongoose-detective [![NPM version](https://badge.fury.io/js/mongoose-detective.png)](http://badge.fury.io/js/mongoose-detective) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 Find the referenced model name at a specified path
 
