@@ -1,10 +1,9 @@
 language: node_js
 node_js:
-  - "4"
-  - "6"
-  - "8"
-  - "9"
+  - "10"
+  - "12"
+  - "14"
 before_install:
-  - npm i mongoose@^4.0.0
+  - npm i mongoose@^5.0.0
 script:
   - npm test
