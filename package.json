@@ -22,9 +22,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^4.0.1",
+    "mocha": "^8.3.0",
     "mongoose": "^5.0.0",
-    "standard": "^10.0.3"
+    "standard": "^16.0.3"
   },
   "files": [
     "LICENSE",
